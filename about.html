@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Naturally Crowned - Pure potions for textured tresses. Our story, our mission, and the women behind the brand.">
+    <meta name="keywords" content="natural hair care, afro hair, shea butter, castor oil, about us, textured hair">
+    <meta name="author" content="Naturally Crowned">
+    <title>About | Naturally Crowned</title>
+    
+      <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/Logo.png">
+    <!-- Bootstrap 5.3 CSS -->
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================================
+           NATURALLY CROWNED - ABOUT PAGE
+           Palette: Clay | Copper | Sand | Ivory | Moss
+           ======================================== */
+        
+        :root {
+            --clay: #C17A4D;
+            --clay-deep: #A35C31;
+            --copper: #D97743;
+            --sand: #E8D9C5;
+            --ivory: #FEF9F0;
+            --moss: #5A6B4A;
+            --moss-deep: #3E4D32;
+            --charcoal: #2A2A2A;
+            --stone: #7A7A7A;
+            --shadow: 0 20px 40px rgba(0,0,0,0.05);
+            --shadow-lg: 0 30px 50px rgba(0,0,0,0.08);
+            --transition: all 0.4s cubic-bezier(0.2, 0.95, 0.4, 1);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.5;
+        }
+        
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        
+        h1, h2, h3 {
+            font-family: 'Instrument Serif', serif;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Buttons */
+        .btn-clay {
+            background: var(--clay);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-clay:hover {
+            background: var(--clay-deep);
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline-moss {
+            background: transparent;
+            border: 1.5px solid var(--moss);
+            color: var(--moss);
+            padding: 10px 28px;
+            font-weight: 500;
+            font-size: 0.8rem;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-outline-moss:hover {
+            background: var(--moss);
+            color: white;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: transparent;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: var(--transition);
+        }
+        
+        .navbar.scrolled {
+            background: var(--ivory);
+            padding: 0.8rem 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .navbar-brand {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            color: var(--charcoal) !important;
+        }
+        
+        .navbar-brand span { color: var(--clay); }
+        
+        .nav-link {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: var(--charcoal) !important;
+            margin: 0 16px;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover, .nav-link.active { color: var(--clay) !important; }
+        
+        /* Page Header */
+        .page-header {
+            padding: 160px 0 80px;
+            background: var(--sand);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '✦';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            bottom: -50px;
+            right: -50px;
+            color: var(--clay);
+        }
+        
+        /* Story Section */
+        .story-section {
+            padding: 80px 0;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .story-img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .story-number {
+            font-size: 5rem;
+            font-family: 'Instrument Serif', serif;
+            color: var(--clay);
+            opacity: 0.15;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        /* Mission Banner */
+        .mission-banner {
+            padding: 80px 0;
+            background: var(--moss);
+            color: white;
+            text-align: center;
+        }
+        
+        .mission-quote {
+            font-size: 2rem;
+            font-family: 'Instrument Serif', serif;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.3;
+        }
+        
+        /* Values Grid */
+        .values-section {
+            padding: 80px 0;
+            background: var(--ivory);
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px;
+            transition: var(--transition);
+        }
+        
+        .value-card:hover { transform: translateY(-5px); }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--sand);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--clay);
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 80px 0;
+            background: var(--sand);
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .team-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        
+        .team-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .team-info {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .team-role {
+            font-size: 0.7rem;
+            color: var(--clay);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        /* Timeline */
+        .timeline-section {
+            padding: 80px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 2px solid var(--clay);
+            transition: var(--transition);
+        }
+        
+        .timeline-item:hover { background: rgba(193,122,77,0.05); transform: translateX(5px); }
+        
+        .timeline-year {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--clay);
+            font-family: 'Instrument Serif', serif;
+            min-width: 100px;
+        }
+        
+        /* CTA Banner */
+        .cta-banner {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--charcoal), #1a1a1a);
+            color: white;
+            text-align: center;
+        }
+        
+        @media (max-width: 992px) {
+            .story-grid { grid-template-columns: 1fr; gap: 40px; }
+            .mission-quote { font-size: 1.5rem; }
+            .timeline-item { flex-direction: column; gap: 10px; }
+            .timeline-year { min-width: auto; }
+        }
+        
+        @media (max-width: 768px) {
+            .page-header { padding: 120px 0 50px; }
+            .navbar { padding: 1rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+             <a class="navbar-brand" href="index.html"> 
+                <img src="img/Logo.png" alt="" height="65px" width="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <div class="hero-tag" style="color: var(--clay); letter-spacing: 3px; font-size: 0.7rem;">✦ OUR STORY ✦</div>
+                    <h1 style="font-size: 3.5rem; margin-top: 1rem;">Rooted in nature.<br>Crowned in glory.</h1>
+                    <p class="text-muted mt-3">We believe every crown — every curl, coil, and kink — deserves to be celebrated.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div data-aos="fade-right">
+                    <img src="img/1.jpg" alt="Founder" class="story-img">
+                </div>
+                <div data-aos="fade-left">
+                    <div class="story-number">2019</div>
+                    <h2 style="font-size: 2.2rem;">From a kitchen table to your crown</h2>
+                    <p style="color: var(--stone); margin: 1rem 0;">Naturally Crowned started in a small kitchen in Gaborone, with a simple belief: our hair shouldn't be a struggle. After years of experimenting with store-bought products filled with ingredients we couldn't pronounce, founder Thandiwe began crafting her own blends.</p>
+                    <p style="color: var(--stone); margin-bottom: 1.5rem;">What started as gifts for friends and family quickly grew into a movement. Word spread. Women saw results. And Naturally Crowned was born.</p>
+                    <a href="#" class="btn-outline-moss">Read the full story →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Banner -->
+    <section class="mission-banner">
+        <div class="container">
+            <div data-aos="zoom-in">
+                <i class="fas fa-quote-left" style="font-size: 2rem; opacity: 0.5; margin-bottom: 1rem; display: block;"></i>
+                <div class="mission-quote">"We're not just selling hair products. We're restoring confidence, one crown at a time."</div>
+                <p style="margin-top: 1.5rem;">— Thandiwe M., Founder</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="hero-tag" style="color: var(--clay);">✦ WHAT WE BELIEVE ✦</div>
+                <h2 style="font-size: 2.5rem;">Rooted in values</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Pure & Potent</h3>
+                        <p style="color: var(--stone);">No fillers. No synthetic fragrances. Just ingredients that actually work.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3>Ethically Sourced</h3>
+                        <p style="color: var(--stone);">Partnering directly with women-led cooperatives in West Africa.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-feather-alt"></i></div>
+                        <h3>Cruelty-Free</h3>
+                        <p style="color: var(--stone);">Never tested on animals. Proudly vegan and clean.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="hero-tag" style="color: var(--clay);">✦ THE CROWN TEAM ✦</div>
+                <h2 style="font-size: 2.5rem;">The faces behind the potions</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card">
+                        <img src="img/thandeka.jpg" alt="Thandiwe M." class="team-img">
+                        <div class="team-info">
+                            <h3>Thandiwe M.</h3>
+                            <div class="team-role">FOUNDER & FORMULATOR</div>
+                            <p style="font-size: 0.8rem; margin-top: 10px;">Hair scientist and natural hair enthusiast with over a decade of experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400" alt="Nia K." class="team-img">
+                        <div class="team-info">
+                            <h3>Nia K.</h3>
+                            <div class="team-role">COMMUNITY LEAD</div>
+                            <p style="font-size: 0.8rem; margin-top: 10px;">Connecting with our crown community and sharing education.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Zuri A." class="team-img">
+                        <div class="team-info">
+                            <h3>Zuri A.</h3>
+                            <div class="team-role">PRODUCT DESIGNER</div>
+                            <p style="font-size: 0.8rem; margin-top: 10px;">Creating the beautiful vessels for your crown potions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="hero-tag" style="color: var(--clay);">✦ THE JOURNEY ✦</div>
+                <h2 style="font-size: 2.5rem;">Our path to your crown</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-year">2019</div>
+                    <div>
+                        <h3>The first batch</h3>
+                        <p style="color: var(--stone);">Thandiwe crafted her first shea butter blend in her kitchen. Friends and family couldn't get enough.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-year">2021</div>
+                    <div>
+                        <h3>Official launch</h3>
+                        <p style="color: var(--stone);">Naturally Crowned launched online with 5 core products. Sold out in 48 hours.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-year">2023</div>
+                    <div>
+                        <h3>Direct trade partnership</h3>
+                        <p style="color: var(--stone);">Began sourcing shea butter directly from women-led cooperatives in Ghana.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-year">2026</div>
+                    <div>
+                        <h3>10,000+ crowns served</h3>
+                        <p style="color: var(--stone);">From Gaborone to the world — celebrating natural hair everywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h2 style="font-size: 2rem;">Join the crown community</h2>
+                <p style="opacity: 0.8; margin: 1rem 0 2rem;">Get hair tips, early access to drops, and 10% off your first order.</p>
+                <a href="#" class="btn-clay" style="background: var(--clay);">Join the Inner Circle →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h3 class="footer-brand">NATURALLY <span>CROWNED</span></h3>
+                    <p class="footer-tagline">Pure potions for textured tresses.</p>
+                    <div class="footer-divider"></div>
+                    <p class="footer-desc">Rooted in nature. Crowned in glory. We create clean, potent hair care that celebrates every curl, coil, and kink.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
+                            <h4 class="footer-heading">SHOP</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">All Potions</a></li>
+                                <li><a href="#">Shea Butter</a></li>
+                                <li><a href="#">Castor Oil</a></li>
+                                <li><a href="#">Growth Blends</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
+                            <h4 class="footer-heading">LEARN</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">Ingredients</a></li>
+                                <li><a href="#">Hair Rituals</a></li>
+                                <li><a href="#">The Journal</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
+                            <h4 class="footer-heading">CONNECT</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">Instagram</a></li>
+                                <li><a href="#">TikTok</a></li>
+                                <li><a href="#">YouTube</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
+                            <h4 class="footer-heading">SUPPORT</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Returns</a></li>
+                                <li><a href="#">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-newsletter-row">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="newsletter-text">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>Get the crown memo — 10% off your first order</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form class="footer-newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe →</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">© 2026 Naturally Crowned. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Footer Styles */
+        .footer {
+            background: var(--charcoal);
+            color: #A0A0A0;
+            padding: 60px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-brand {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--clay); }
+        .footer-tagline { font-size: 0.8rem; color: var(--clay); letter-spacing: 2px; margin-bottom: 1rem; }
+        .footer-divider { width: 40px; height: 2px; background: var(--clay); margin: 1rem 0; }
+        .footer-desc { font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem; max-width: 280px; }
+        .footer-social { display: flex; gap: 12px; }
+        .social-circle { width: 38px; height: 38px; background: rgba(255,255,255,0.08); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; transition: var(--transition); }
+        .social-circle:hover { background: var(--clay); transform: translateY(-3px); }
+        .footer-heading { font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: white; margin-bottom: 1.2rem; }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 0.6rem; }
+        .footer-links a { color: #A0A0A0; text-decoration: none; font-size: 0.8rem; transition: var(--transition); }
+        .footer-links a:hover { color: var(--clay); transform: translateX(3px); }
+        .footer-newsletter-row { margin-top: 50px; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .newsletter-text { display: flex; align-items: center; gap: 12px; font-size: 0.85rem; color: white; }
+        .newsletter-text i { font-size: 1.2rem; color: var(--clay); }
+        .footer-newsletter-form { display: flex; gap: 0; }
+        .footer-newsletter-form input { flex: 1; padding: 12px 16px; border: none; background: rgba(255,255,255,0.08); color: white; font-family: 'DM Sans', sans-serif; }
+        .footer-newsletter-form input::placeholder { color: #666; }
+        .footer-newsletter-form button { padding: 12px 24px; background: var(--clay); border: none; color: white; font-weight: 500; cursor: pointer; transition: var(--transition); }
+        .footer-newsletter-form button:hover { background: var(--clay-deep); }
+        .footer-bottom { padding: 25px 0 30px; }
+        .payment-icons { display: flex; gap: 15px; justify-content: flex-end; font-size: 1.2rem; color: #666; }
+        @media (max-width: 768px) {
+            .footer-newsletter-form { flex-direction: column; margin-top: 15px; }
+            .footer-newsletter-form button { margin-top: 10px; }
+            .payment-icons { justify-content: center; margin-top: 15px; }
+            .footer-desc { max-width: 100%; }
+            .newsletter-text { justify-content: center; }
+            .footer-links { text-align: center; }
+            .footer-heading { text-align: center; }
+            .footer-social { justify-content: center; }
+            .footer-divider { margin: 1rem auto; }
+            .footer-tagline { text-align: center; }
+            .footer-brand { text-align: center; display: block; }
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+        
+        const currentPage = 'about.html';
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === currentPage) link.classList.add('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Connect with Naturally Crowned — follow us on social media, reach out via email or WhatsApp, and join our crown community.">
+    <meta name="keywords" content="connect, contact, social media, naturally crowned, hair care community">
+    <meta name="author" content="Naturally Crowned">
+    <title>Connect | Naturally Crowned</title>
+    
+      <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/Logo.png">
+    <!-- Bootstrap 5.3 CSS -->
+     
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Shared External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Connect Page Specific Styles */
+        
+        .connect-hero {
+            background: linear-gradient(135deg, var(--sand) 0%, var(--ivory) 100%);
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .connect-hero::before {
+            content: '✧';
+            position: absolute;
+            font-size: 250px;
+            opacity: 0.08;
+            bottom: -60px;
+            left: -60px;
+            color: var(--clay);
+            font-family: monospace;
+        }
+        
+        .connect-hero::after {
+            content: '✦';
+            position: absolute;
+            font-size: 180px;
+            opacity: 0.06;
+            top: -40px;
+            right: -40px;
+            color: var(--clay);
+            font-family: monospace;
+        }
+        
+        /* Contact Cards Row */
+        .contact-cards-row {
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-card-premium {
+            background: white;
+            border-radius: 28px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            height: 100%;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        
+        .contact-card-premium:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--clay);
+        }
+        
+        .contact-icon-premium {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--sand), var(--ivory));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: var(--clay);
+            transition: var(--transition);
+        }
+        
+        .contact-card-premium:hover .contact-icon-premium {
+            background: var(--clay);
+            color: white;
+        }
+        
+        .contact-card-premium h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .contact-card-premium p {
+            color: var(--stone);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-link {
+            color: var(--clay);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+        
+        .contact-link:hover {
+            gap: 12px;
+            color: var(--clay-deep);
+        }
+        
+        /* Split Section */
+        .connect-split {
+            padding: 80px 0;
+        }
+        
+        .message-card {
+            background: white;
+            border-radius: 28px;
+            padding: 45px;
+            box-shadow: var(--shadow);
+            height: 100%;
+        }
+        
+        .message-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .input-modern {
+            width: 100%;
+            padding: 14px 0;
+            border: none;
+            border-bottom: 1px solid #e0d5c0;
+            background: transparent;
+            font-family: 'DM Sans', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .input-modern:focus {
+            outline: none;
+            border-bottom-color: var(--clay);
+        }
+        
+        textarea.input-modern {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .community-card {
+            background: linear-gradient(135deg, var(--moss), var(--moss-deep));
+            border-radius: 28px;
+            padding: 45px;
+            color: white;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .community-card::before {
+            content: '✧';
+            position: absolute;
+            font-size: 180px;
+            opacity: 0.08;
+            bottom: -40px;
+            right: -40px;
+            color: white;
+        }
+        
+        .community-stats {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .community-stat {
+            text-align: center;
+        }
+        
+        .community-number {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Instrument Serif', serif;
+        }
+        
+        .social-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-btn {
+            background: rgba(255,255,255,0.12);
+            border-radius: 50px;
+            padding: 12px 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.85rem;
+        }
+        
+        .social-btn:hover {
+            background: white;
+            color: var(--moss);
+            transform: translateY(-2px);
+        }
+        
+        /* Map Section */
+        .map-section {
+            padding: 60px 0;
+            background: var(--sand);
+        }
+        
+        .map-wrapper {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .map-wrapper iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-cards-row {
+                margin-top: -30px;
+            }
+            .message-card, .community-card {
+                padding: 30px;
+            }
+            .social-row {
+                justify-content: center;
+            }
+            .community-stats {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+             <a class="navbar-brand" href="index.html"> 
+                <img src="img/Logo.png" alt="" height="65px" width="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="connect.html">Connect</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="connect-hero">
+        <div class="container">
+            <div class="hero-tag" style="color: var(--clay);">✦ LET'S CONNECT ✦</div>
+            <h1 style="font-size: 3rem; margin-top: 1rem;">We're here for you</h1>
+            <p style="color: var(--stone); max-width: 600px; margin: 1rem auto 0;">Questions? Stories? Just want to say hello? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Cards Row -->
+    <div class="contact-cards-row">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card-premium">
+                        <div class="contact-icon-premium"><i class="fas fa-envelope"></i></div>
+                        <h3>Email Us</h3>
+                        <p>We respond within 24 hours</p>
+                        <a href="mailto:hello@naturallycrowned.co.bw" class="contact-link">hello@naturallycrowned.co.bw →</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card-premium">
+                        <div class="contact-icon-premium"><i class="fab fa-whatsapp"></i></div>
+                        <h3>WhatsApp</h3>
+                        <p>Quickest response time</p>
+                        <a href="https://wa.me/26771234567" class="contact-link">+267 71 234 567 →</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-card-premium">
+                        <div class="contact-icon-premium"><i class="fas fa-clock"></i></div>
+                        <h3>Response Time</h3>
+                        <p>Mon-Fri: 9AM - 6PM</p>
+                        <span class="contact-link" style="cursor: default;">Within 24 hours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Split Section: Message Form + Community -->
+    <section class="connect-split">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Message Form -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="message-card">
+                        <h2>Send a message</h2>
+                        <p class="text-muted small mb-4">Fill out the form below and we'll get back to you shortly.</p>
+                        
+                        <form id="contactForm">
+                            <div class="mb-4">
+                                <label class="form-label small text-uppercase fw-semibold">Full Name <span style="color: var(--clay);">*</span></label>
+                                <input type="text" class="input-modern w-100" id="name" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small text-uppercase fw-semibold">Email Address <span style="color: var(--clay);">*</span></label>
+                                <input type="email" class="input-modern w-100" id="email" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small text-uppercase fw-semibold">Subject</label>
+                                <input type="text" class="input-modern w-100" id="subject">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small text-uppercase fw-semibold">Message <span style="color: var(--clay);">*</span></label>
+                                <textarea class="input-modern w-100" id="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-clay w-100" style="background: var(--clay);">Send Message →</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Community Card -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="community-card">
+                        <h2 style="color: white;">Join the crown community</h2>
+                        <p style="opacity: 0.8;">10,000+ strong and growing. You belong here.</p>
+                        
+                        <div class="community-stats">
+                            <div class="community-stat">
+                                <div class="community-number">10K+</div>
+                                <div class="small">Community members</div>
+                            </div>
+                            <div class="community-stat">
+                                <div class="community-number">5K+</div>
+                                <div class="small">Happy customers</div>
+                            </div>
+                            <div class="community-stat">
+                                <div class="community-number">4.9</div>
+                                <div class="small">Average rating</div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-row">
+                            <a href="#" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="#" class="social-btn"><i class="fab fa-tiktok"></i> TikTok</a>
+                            <a href="#" class="social-btn"><i class="fab fa-youtube"></i> YouTube</a>
+                            <a href="#" class="social-btn"><i class="fab fa-pinterest"></i> Pinterest</a>
+                        </div>
+                        
+                        <div class="mt-4 pt-3" style="border-top: 1px solid rgba(255,255,255,0.15);">
+                            <p class="small mb-0" style="opacity: 0.6;">✨ Tag @naturallycrowned to be featured</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <div class="hero-tag" style="color: var(--clay);">✦ FIND US ✦</div>
+                <h2 style="font-size: 2rem;">Visit our flagship</h2>
+                <p class="text-muted">Come experience the crown difference in person</p>
+            </div>
+            <div class="map-wrapper" data-aos="zoom-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115603.25934157322!2d25.84714375!3d-24.65822215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebb5b3c2f5a5e0d%3A0x3a5b7c8d9e0f1a2b!2sGaborone!5e0!3m2!1sen!2sbw!4v1700000000000!5m2!1sen!2sbw" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <a href="index.html" class="footer-brand">NATURALLY <span>CROWNED</span></a>
+                    <p class="footer-tagline">Pure potions for textured tresses.</p>
+                    <div class="footer-divider"></div>
+                    <p class="footer-desc">Rooted in nature. Crowned in glory. We create clean, potent hair care that celebrates every curl, coil, and kink.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
+                            <h4 class="footer-heading">SHOP</h4>
+                            <ul class="footer-links"><li><a href="#">All Potions</a></li><li><a href="#">Shea Butter</a></li><li><a href="#">Castor Oil</a></li></ul>
+                        </div>
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
+                            <h4 class="footer-heading">LEARN</h4>
+                            <ul class="footer-links"><li><a href="#">Ingredients</a></li><li><a href="#">Hair Rituals</a></li><li><a href="#">FAQ</a></li></ul>
+                        </div>
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
+                            <h4 class="footer-heading">CONNECT</h4>
+                            <ul class="footer-links"><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="#">Newsletter</a></li></ul>
+                        </div>
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
+                            <h4 class="footer-heading">SUPPORT</h4>
+                            <ul class="footer-links"><li><a href="#">Contact</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-newsletter-row">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="newsletter-text"><i class="fas fa-envelope-open-text"></i><span>Get the crown memo — 10% off your first order</span></div>
+                    </div>
+                    <div class="col-md-6">
+                        <form class="footer-newsletter-form" id="footerNewsletter">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe →</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">© 2026 Naturally Crowned. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="payment-icons"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fas fa-mobile-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+        
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+        
+        const currentPage = 'connect.html';
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === currentPage) link.classList.add('active');
+        });
+        
+        function showNotification(message, type) {
+            const existing = document.querySelector('.notification-toast');
+            if (existing) existing.remove();
+            
+            const toast = document.createElement('div');
+            toast.className = `notification-toast ${type}`;
+            toast.innerHTML = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 4000);
+        }
+        
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (!name || !email || !message) {
+                showNotification('Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            const emailRegex = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            showNotification('✨ Message sent! We\'ll get back to you within 24 hours.', 'success');
+            this.reset();
+        });
+        
+        document.getElementById('footerNewsletter')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✨ Welcome to the crown club! Check your inbox for 10% off.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

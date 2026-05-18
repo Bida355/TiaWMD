@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop pure, potent hair care at Naturally Crowned. Raw shea butter, black castor oil, growth blends, and more for textured tresses.">
+    <meta name="keywords" content="shea butter, castor oil, natural hair products, afro hair care, shop">
+    <meta name="author" content="Naturally Crowned">
+    <title>Shop | Naturally Crowned</title>
+
+      <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/Logo.png">
+    <!-- Bootstrap 5.3 CSS -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+             <a class="navbar-brand" href="index.html"> 
+                <img src="img/Logo.png" alt="" height="65px" width="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="hero-tag">✦ THE COLLECTION ✦</div>
+            <h1>Pure potions for your crown</h1>
+            <p>Handcrafted. Small batch. Made with intention.</p>
+        </div>
+    </section>
+
+    <section class="shop-section">
+        <div class="container">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="shea">Shea Butter</button>
+                <button class="filter-btn" data-filter="castor">Castor Oil</button>
+                <button class="filter-btn" data-filter="blends">Blends</button>
+            </div>
+
+            <div class="product-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <a href="index.html" class="footer-brand">NATURALLY <span>CROWNED</span></a>
+                    <p class="footer-tagline">Pure potions for textured tresses.</p>
+                    <div class="footer-divider"></div>
+                    <p class="footer-desc">Rooted in nature. Crowned in glory.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-3 col-6"><h4 class="footer-heading">SHOP</h4><ul class="footer-links"><li><a href="#">All Potions</a></li><li><a href="#">Shea Butter</a></li><li><a href="#">Castor Oil</a></li></ul></div>
+                        <div class="col-md-3 col-6"><h4 class="footer-heading">LEARN</h4><ul class="footer-links"><li><a href="#">Ingredients</a></li><li><a href="#">Hair Rituals</a></li><li><a href="#">FAQ</a></li></ul></div>
+                        <div class="col-md-3 col-6"><h4 class="footer-heading">CONNECT</h4><ul class="footer-links"><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="#">Newsletter</a></li></ul></div>
+                        <div class="col-md-3 col-6"><h4 class="footer-heading">SUPPORT</h4><ul class="footer-links"><li><a href="#">Contact</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li></ul></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-newsletter-row"><div class="row align-items-center"><div class="col-md-6"><div class="newsletter-text"><i class="fas fa-envelope-open-text"></i><span>Get the crown memo — 10% off your first order</span></div></div><div class="col-md-6"><form class="footer-newsletter-form"><input type="email" placeholder="Your email address"><button type="submit">Subscribe →</button></form></div></div></div>
+            <div class="footer-bottom"><div class="row align-items-center"><div class="col-md-6 text-center text-md-start"><p class="mb-0">© 2026 Naturally Crowned.</p></div><div class="col-md-6 text-center text-md-end"><div class="payment-icons"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fas fa-mobile-alt"></i></div></div></div></div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        window.addEventListener('scroll', () => { document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50); });
+        document.querySelectorAll('.nav-link').forEach(link => { link.classList.remove('active'); if (link.getAttribute('href') === 'shop.html') link.classList.add('active'); });
+
+        const products = [
+            { id: 1, name: "Raw Shea Butter", price: 450, category: "shea", image: "img/shea.jpg", badge: "BESTSELLER" },
+            { id: 2, name: "Black Castor Oil", price: 550, category: "castor", image: "img/castor.jpg", badge: null },
+            { id: 3, name: "Growth Oil Blend", price: 650, category: "blends", image: "img/butter.jpg", badge: "NEW" },
+            { id: 4, name: "Whipped Shea Butter", price: 520, category: "shea", image: "img/growth.jpg", badge: null },
+            { id: 5, name: "Rosemary Mint Oil", price: 580, category: "blends", image: "img/mint.jpg", badge: null },
+            { id: 6, name: "Jamaican Castor Oil", price: 590, category: "castor", image: "img/oil.jpg", badge: "POPULAR" }
+        ];
+
+        function renderProducts(filter = "all") {
+            const filtered = filter === "all" ? products : products.filter(p => p.category === filter);
+            document.getElementById('productsGrid').innerHTML = filtered.map(p => `
+                <div class="product-card">
+                    <img src="${p.image}" alt="${p.name}" class="product-img">
+                    <div class="product-info">
+                        ${p.badge ? `<div class="product-badge">${p.badge}</div>` : ''}
+                        <h3 class="product-title">${p.name}</h3>
+                        <div class="product-price">₱${p.price}</div>
+                        <button class="btn-outline-moss" style="padding: 6px 20px;" onclick="alert('✨ Added to bag!')">Add to Bag →</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                renderProducts(this.getAttribute('data-filter'));
+            });
+        });
+        renderProducts();
+    </script>
+</body>
+</html>
